@@ -97,7 +97,7 @@ void render_limb_or_add_mtx(Armature* arg0, s16* arg1, AnimationLimbVector arg2,
         angle[i] = arg1[arg2[i].indexCycle + some_offset];
     }
     //FrameInterpolation_RecordMatrixPush(modelMatrix);
-    FrameInterpolation_RecordOpenChild("yoshi_egg", TAG_OBJECT(modelMatrix));
+    FrameInterpolation_RecordOpenChild("", TAG_OBJECT(modelMatrix));
     mtxf_translate_rotate2(modelMatrix, pos, angle);
     //convert_to_fixed_point_matrix_animation(&gGfxPool->mtxHud[gMatrixHudCount], modelMatrix);
     sMatrixStackSize += 1;
