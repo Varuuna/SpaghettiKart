@@ -5632,7 +5632,7 @@ void func_8009D998(s32 arg0) {
                 gDisplayListHead =
                     draw_box_wide_pause_background(gDisplayListHead, var_t0 - temp_v0, var_t1 - temp_v1,
                                                    rightEdge + someMath0, someMath1, 0, 0, 0, 0x000000FF);
-            } else if ((arg0 == 1) || (arg0 == 3)) {
+            } else if ((arg0 == 4)) {
                 gDisplayListHead = draw_box_wide(gDisplayListHead, var_t0 - temp_v0, var_t1 - temp_v1, someMath0, someMath1,
                                                  0, 0, 0, 0x000000FF);
             }
