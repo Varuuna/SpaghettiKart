@@ -5100,8 +5100,7 @@ void draw_fade_in(s32 arg0, s32 arg1, s32 arg2) {
                     gDisplayListHead, x - (w / 2), y - (h / 2), rightEdge + ((w / 2) + x), (h / 2) + y, color->red,
                     color->green, color->blue,
                     0xFF - (gCurrentTransitionTime[arg0] * 0xFF / gTransitionDuration[arg0]));
-            }
-            else if ((arg0 == 4)) {
+            } else if ((arg0 == 4)) {
                 gDisplayListHead = draw_box_wide(gDisplayListHead, x - (w / 2), y - (h / 2), (w / 2) + x, (h / 2) + y,
                                                  color->red, color->green, color->blue,
                                                  0xFF - (gCurrentTransitionTime[arg0] * 0xFF / gTransitionDuration[arg0]));
