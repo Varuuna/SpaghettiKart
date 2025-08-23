@@ -25,7 +25,7 @@ void render_actor_mario_sign(Camera* arg0, UNUSED Mat4 arg1, struct Actor* arg2)
     }
     if (!(unk < 0.0f)) {
 
-        FrameInterpolation_RecordOpenChild("mario_sign", TAG_OBJECT(mtx));
+        FrameInterpolation_RecordOpenChild("mario_sign", TAG_OBJECT(arg2));
 
         gSPSetGeometryMode(gDisplayListHead++, G_SHADING_SMOOTH);
         gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);

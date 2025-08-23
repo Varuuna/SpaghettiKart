@@ -53,7 +53,7 @@ void render_actor_yoshi_egg(Camera* arg0, Mat4 arg1, struct YoshiValleyEgg* egg,
         sp5C[1] = egg->eggRot;
         sp5C[2] = 0;
 
-        FrameInterpolation_RecordOpenChild("yoshi_egg", TAG_OBJECT(sp60));
+        FrameInterpolation_RecordOpenChild("yoshi_egg", TAG_OBJECT(egg));
 
         mtxf_pos_rotation_xyz(sp60, egg->pos, sp5C);
         if (render_set_position(sp60, 0) == 0) {
@@ -68,7 +68,7 @@ void render_actor_yoshi_egg(Camera* arg0, Mat4 arg1, struct YoshiValleyEgg* egg,
         arg1[3][1] = egg->pos[1];
         arg1[3][2] = egg->pos[2];
 
-        FrameInterpolation_RecordOpenChild("yoshi_egg", TAG_OBJECT(arg1));
+        FrameInterpolation_RecordOpenChild("yoshi_egg2", TAG_OBJECT(egg));
 
         if (render_set_position(arg1, 0) != 0) {
             gSPClearGeometryMode(gDisplayListHead++, G_LIGHTING);
