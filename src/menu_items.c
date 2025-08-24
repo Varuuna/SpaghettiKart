@@ -5100,7 +5100,7 @@ void draw_fade_in(s32 arg0, s32 arg1, s32 arg2) {
                     gDisplayListHead, x - (w / 2), y - (h / 2), rightEdge + ((w / 2) + x), (h / 2) + y, color->red,
                     color->green, color->blue,
                     0xFF - (gCurrentTransitionTime[arg0] * 0xFF / gTransitionDuration[arg0]));
-            } else if ((arg0 == 4)) {
+            } else if ((arg0 == 4)) { // arg0 is the screenId. Why is it 4 in the Menu?
                 gDisplayListHead = draw_box_wide(gDisplayListHead, x - (w / 2), y - (h / 2), (w / 2) + x, (h / 2) + y,
                                                  color->red, color->green, color->blue,
                                                  0xFF - (gCurrentTransitionTime[arg0] * 0xFF / gTransitionDuration[arg0]));
@@ -5550,7 +5550,7 @@ void func_8009D77C(s32 arg0, s32 arg1, s32 arg2) {
                 gDisplayListHead = draw_box_wide_pause_background(gDisplayListHead, var_t3 - temp_v1, var_t4 - temp_t8,
                                                                   rightEdge + someMath0, someMath1, temp_v0_2->red,
                                                                   temp_v0_2->green, temp_v0_2->blue, var_t2);
-            } else if ((arg0 == 4)) {
+            } else if ((arg0 == 4)) { // arg0 is the screenId. Why is it 4 in the Menu?
                 gDisplayListHead = draw_box_wide(gDisplayListHead, var_t3 - temp_v1, var_t4 - temp_t8, someMath0, someMath1,
                                                  temp_v0_2->red, temp_v0_2->green, temp_v0_2->blue, var_t2);
             }
@@ -5631,9 +5631,6 @@ void func_8009D998(s32 arg0) {
                 gDisplayListHead =
                     draw_box_wide_pause_background(gDisplayListHead, var_t0 - temp_v0, var_t1 - temp_v1,
                                                    rightEdge + someMath0, someMath1, 0, 0, 0, 0x000000FF);
-            } else if ((arg0 == 4)) {
-                gDisplayListHead = draw_box_wide(gDisplayListHead, var_t0 - temp_v0, var_t1 - temp_v1, someMath0, someMath1,
-                                                 0, 0, 0, 0x000000FF);
             }
             break;
     }
