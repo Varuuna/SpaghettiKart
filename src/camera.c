@@ -18,6 +18,7 @@
 #include "spawn_players.h"
 #include "enhancements/freecam/freecam_engine.h"
 #include "enhancements/freecam/freecam.h"
+#include "enhancements/look_behind.h"
 #include "port/interpolation/FrameInterpolation.h"
 
 #include "engine/GameAPI.h"

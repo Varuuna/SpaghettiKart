@@ -38,6 +38,8 @@
 #include <assets/dks_jungle_parkway_data.h>
 #include <stdio.h>
 
+#include "enhancements/look_behind.h"
+
 #include "port/Game.h"
 #include "engine/courses/Course.h"
 
@@ -6732,6 +6734,11 @@ void func_8001A0A4(UNUSED u16* arg0, UNUSED Camera* arg1, UNUSED Player* arg2, U
 void func_8001A0DC(u16* arg0, Camera* arg1, Player* arg2, s8 arg3, s32 arg4) {
     func_8001A0A4(arg0, arg1, arg2, arg3, arg4);
     func_80019D2C(arg1, arg2, arg4);
+
+    // Probably move this?
+    // if (CVarGetInteger("gEnableLookBehindCamera", 0)) {
+    look_behind_apply_camera_transform(arg1, arg2, arg4);
+    //}
 }
 
 void func_8001A124(s32 arg0, s32 arg1) {
